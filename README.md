@@ -6,7 +6,7 @@ We focus on creating a coordinated control plane that allows highly sophisticate
 
 ## Mission
 
-The whole is greater than the sum of the parts: we make it easy to create commercial applications for advanced drone application (highly coordinated, AI, and machine vision driven) using the cheapest commercial drones. 
+The whole is greater than the sum of the parts: we make it easy to create commercial deployments for advanced drone applications (highly coordinated, AI, and machine vision driven) using the cheapest available commodity drones.
 
 ## MVP
 
