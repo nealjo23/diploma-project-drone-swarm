@@ -1,6 +1,6 @@
 from djitellopy import Tello
 
-tello = Tello()
+tello = Tello("10.25.35.127")
 
 tello.connect()
 tello.takeoff()
