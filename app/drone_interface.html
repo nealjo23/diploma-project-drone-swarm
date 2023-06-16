@@ -47,9 +47,10 @@
     </style>
 </head>
 <body>
-    <div id="video-container">
-        <video id="video-stream" autoplay></video>
-    </div>
+  <video  controls autoplay muted>
+    <source src="http://localhost:63342/diploma-project-drone-swarm/app/CleverDog.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
     <div id="controls">
         <button id="takeoff-button" class="control-button">Takeoff</button>
         <button id="rotate-left-button" class="control-button">Rotate Left</button>
@@ -104,7 +105,7 @@
 
         // Initialize the video stream from the drone using cv2
         // Replace 'VIDEO_STREAM_URL' with the actual URL for the video stream
-        videoStream.src = "https://www.youtube.com/watch?v=lX9UQp2NwTk";
+        videoStream.src = "CleverDog.mp4";
     </script>
 </body>
 </html>
