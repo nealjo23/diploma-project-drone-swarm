@@ -1,12 +1,8 @@
-﻿av==10.0.0
-black==23.3.0
+blinker==1.6.2
 click==8.1.3
 colorama==0.4.6
--e git+https://github.com/nealjo23/diploma-project-drone-swarm.git@e82d8cc6344cb09679ee98931f37f100d694b005#egg=djitellopy&subdirectory=djitellopy
-mypy-extensions==1.0.0
-numpy==1.24.3
-opencv-python==4.7.0.72
-packaging==23.1
-pathspec==0.11.1
-Pillow==9.5.0
-platformdirs==3.5.0
+Flask==2.3.2
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+Werkzeug==2.3.6
