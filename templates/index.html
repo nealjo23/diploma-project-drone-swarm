@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drone Video demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #controls {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            max-width: 640px;
+        }
+
+        .control-button {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body class="h-screen bg-sky-200 px-2">
+<div class="mx-auto my-2 p-4 bg-sky-100 max-w-[85rem]">
+    <div class="mb-1 border border-blue-500 p-1 rounded-lg">
+        <h1 class="text-2xl my-1">Drone Video demo by John Neal 20003366</h1>
+    </div>
+    <video controls autoplay muted loop>
+        <source src="{{ links.video }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="controls">
+        <button id="takeoff-button" class="control-button">Takeoff</button>
+        <button id="rotate-left-button" class="control-button">Rotate Left</button>
+        <button id="fly-fwd-button" class="control-button">Fly Forward</button>
+        <button id="rotate-right-button" class="control-button">Rotate Right</button>
+        <button id="tilt-fwd-button" class="control-button">Tilt Forward</button>
+        <button id="video-on-button" class="control-button">Video On</button>
+        <button id="land-button" class="control-button">Land</button>
+        <button id="fly-left-button" class="control-button">Fly Left</button>
+        <button id="fly-back-button" class="control-button">Fly Backward</button>
+        <button id="fly-right-button" class="control-button">Fly Right</button>
+        <button id="tilt-back-button" class="control-button">Tilt Backward</button>
+        <button id="video-off-button" class="control-button">Video Off</button>
+    </div>
+
+
+</div>
+</body>
+</html>

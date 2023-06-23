@@ -11,6 +11,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         #video-container {
             width: 640px;
             height: 480px;
@@ -19,17 +20,20 @@
             overflow: hidden;
             position: relative;
         }
+
         #video-stream {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         #controls {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 10px;
             max-width: 640px;
         }
+
         .control-button {
             width: 100%;
             height: 50px;
@@ -39,6 +43,7 @@
             font-size: 16px;
             cursor: pointer;
         }
+
         #takeoff-land,
         #land-button {
             background-color: green;
@@ -47,65 +52,25 @@
     </style>
 </head>
 <body>
-  <video  controls autoplay muted loop>
+<video controls autoplay muted loop>
     <source src="http://127.0.0.1:5000/video" type="video/mp4">
     Your browser does not support the video tag.
-  </video>
-    <div id="controls">
-        <button id="takeoff-button" class="control-button">Takeoff</button>
-        <button id="rotate-left-button" class="control-button">Rotate Left</button>
-        <button id="fly-fwd-button" class="control-button">Fly Forward</button>
-        <button id="rotate-right-button" class="control-button">Rotate Right</button>
-        <button id="tilt-fwd-button" class="control-button">Tilt Forward</button>
-        <button id="video-on-button" class="control-button">Video On</button>
-        <button id="land-button" class="control-button">Land</button>
-        <button id="fly-left-button" class="control-button">Fly Left</button>
-        <button id="fly-back-button" class="control-button">Fly Backward</button>
-        <button id="fly-right-button" class="control-button">Fly Right</button>
-        <button id="tilt-back-button" class="control-button">Tilt Backward</button>
-        <button id="video-off-button" class="control-button">Video Off</button>
-    </div>
+</video>
+<div id="controls">
+    <button id="takeoff-button" class="control-button">Takeoff</button>
+    <button id="rotate-left-button" class="control-button">Rotate Left</button>
+    <button id="fly-fwd-button" class="control-button">Fly Forward</button>
+    <button id="rotate-right-button" class="control-button">Rotate Right</button>
+    <button id="tilt-fwd-button" class="control-button">Tilt Forward</button>
+    <button id="video-on-button" class="control-button">Video On</button>
+    <button id="land-button" class="control-button">Land</button>
+    <button id="fly-left-button" class="control-button">Fly Left</button>
+    <button id="fly-back-button" class="control-button">Fly Backward</button>
+    <button id="fly-right-button" class="control-button">Fly Right</button>
+    <button id="tilt-back-button" class="control-button">Tilt Backward</button>
+    <button id="video-off-button" class="control-button">Video Off</button>
+</div>
 
-    <script>
-        const videoStream = document.getElementById('video-stream');
-        const takeoffButton = document.getElementById('takeoff-button');
-        const rotateLeftButton = document.getElementById('rotate-left-button');
-        const flyFwdButton = document.getElementById('fly-fwd-button');
-        const rotateRightButton = document.getElementById('rotate-right-button');
-        const tiltFwdButton = document.getElementById('tilt-fwd-button');
-        const videoOnButton = document.getElementById('video-on-button');
-        const landButton = document.getElementById('land-button');
-        const flyLeftButton = document.getElementById('fly-left-button');
-        const flyBackButton = document.getElementById('fly-back-button');
-        const flyRightButton = document.getElementById('fly-right-button');
-        const tiltBackButton = document.getElementById('tilt-back-button');
-        const videoOffButton = document.getElementById('video-off-button');
 
-        // Add event listeners for the buttons
-        takeoffButton.addEventListener('click', sendTakeoffCommand);
-        rotateLeftButton.addEventListener('click', sendRotateLeftCommand);
-        flyFwdButton.addEventListener('click', sendFlyForwardCommand);
-        rotateRightButton.addEventListener('click', sendRotateRightCommand);
-        tiltFwdButton.addEventListener('click', sendTiltForwardCommand);
-        videoOnButton.addEventListener('click', sendVideoOnCommand);
-        landButton.addEventListener('click', sendLandCommand);
-        flyLeftButton.addEventListener('click', sendFlyLeftCommand);
-        flyBackButton.addEventListener('click', sendFlyBackwardCommand);
-        flyRightButton.addEventListener('click', sendFlyRightCommand);
-        tiltBackButton.addEventListener('click', sendTiltBackwardCommand);
-        videoOffButton.addEventListener('click', sendVideoOffCommand);
-
-        // Functions to handle button click events
-        function sendTakeoffCommand() {
-            // Send takeoff command to the server using FastAPI
-            // Implement your DJITelloPy API code here
-        }
-
-        // Implement the remaining button functions in a similar way
-
-        // Initialize the video stream from the drone using cv2
-        // Replace 'VIDEO_STREAM_URL' with the actual URL for the video stream
-        videoStream.src = "CleverDog.mp4";
-    </script>
 </body>
 </html>

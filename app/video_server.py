@@ -14,8 +14,9 @@ def stream_video():
                 if not chunk:
                     break
                 yield chunk
+
     return Response(stream_with_context(generate()), content_type='video/mp4')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5000)
